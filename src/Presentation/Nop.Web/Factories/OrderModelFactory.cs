@@ -460,9 +460,9 @@ namespace Nop.Web.Factories
                 }
 
                 //downloadable products
-                if (_downloadService.IsDownloadAllowed(orderItem))
+                if (_orderService.IsDownloadAllowed(orderItem))
                     orderItemModel.DownloadId = product.DownloadId;
-                if (_downloadService.IsLicenseDownloadAllowed(orderItem))
+                if (_orderService.IsLicenseDownloadAllowed(orderItem))
                     orderItemModel.LicenseId = orderItem.LicenseDownloadId ?? 0;
             }
 

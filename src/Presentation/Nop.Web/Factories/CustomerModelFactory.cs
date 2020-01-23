@@ -858,10 +858,10 @@ namespace Nop.Web.Factories
                 };
                 model.Items.Add(itemModel);
 
-                if (_downloadService.IsDownloadAllowed(item))
+                if (_orderService.IsDownloadAllowed(item))
                     itemModel.DownloadId = product.DownloadId;
 
-                if (_downloadService.IsLicenseDownloadAllowed(item))
+                if (_orderService.IsLicenseDownloadAllowed(item))
                     itemModel.LicenseId = item.LicenseDownloadId ?? 0;
             }
 
